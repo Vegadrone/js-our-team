@@ -37,39 +37,42 @@ const teamMembers = [
     {
         Name:"Wayne Barnett",
         Role:"Founder & CEO",
-        Img: "wayne - barnett - founder - ceo.jpg"
+        Img: "./img/wayne-barnett-founder-ceo.jpg"
     },
     {
         Name: "Angela Caroll",
         Role: "Chief Editor",
-        Img: "angela - caroll - chief - editor.jpg"
+        Img: "./img/angela-caroll-chief-editor.jpg"
     },
     {
         Name: "Walter Gordon",
         Role: "Office Manager",
-        Img: "walter - gordon - office - manager.jpg"
+        Img: "./img/walter-gordon-office-manager.jpg"
     },
     {
         Name: " Angela Lopez",
         Role: "Media Manager",
-        Img: "angela - lopez - social - media - manager.jpg"
+        Img: "./img/angela-lopez-social-media-manager.jpg"
     },
     {
         Name: "Scott Estrada",
         Role: "Developer",
-        Img: "scott - estrada - developer.jpg"
+        Img: "./img/scott-estrada-developer.jpg"
     },
     {
         Name: "Barbara Ramos",
         Role: "Graphic Designer",
-        Img: "barbara - ramos - graphic - designer.jpg"
+        Img: `./img/barbara-ramos-graphic-designer.jpg`
     },
 ];
 
 const teamMembersWrapper = document.getElementById('members-wrapper');
 
 for (let i = 0; i < teamMembers.length; i++){
-   const member = document.createElement('div');
-   member.innerHTML = `NAME => ${teamMembers[i].Name}, ROLE => ${teamMembers[i].Role}, IMG => ${teamMembers[i].Img}`;
-   teamMembersWrapper.append(member);
+    const member = document.createElement('div');
+    const memberPhoto = document.createElement('img');
+    memberPhoto.setAttribute("src",`${teamMembers[i].Img}`);
+    member.innerHTML = `${teamMembers[i].Name}, ${teamMembers[i].Role}`;
+    member.append(memberPhoto);
+    teamMembersWrapper.append(member, memberPhoto);
 };
