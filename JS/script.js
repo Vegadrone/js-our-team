@@ -46,10 +46,11 @@ const teamMembersWrapper = document.getElementById('members-wrapper');
 //Creating a Card
 
 for (let i = 0; i < teamMembers.length; i++){
+    console.log (teamMembers[i])
     const cardCol = document.createElement('div');
     cardCol.classList.add('card', 'col-3', 'm-4');
     cardCol.innerHTML = `
-    <img src="${teamMembers[i].Img}" class="card-img-top p-3" alt="img">
+    <img src="${teamMembers[i].Img}"class="card-img-top p-3 rounded-5" alt="img">
         <div class="card-body">
             <h5 class="card-title fw-bold">${teamMembers[i].Name}</h5>
         </div >
@@ -64,5 +65,16 @@ for (let i = 0; i < teamMembers.length; i++){
         </div>`
     teamMembersWrapper.append(cardCol);
 };
+
+const newMember = {
+    Name: 'Franco Developpi',
+    Role: 'DA BOSS',
+    Img: './img/new-team-member-02',
+    Age: 44
+}
+
+teamMembers.push(newMember);
+
+console.log(teamMembers);
 
 
