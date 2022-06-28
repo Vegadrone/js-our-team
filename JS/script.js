@@ -66,8 +66,10 @@ const teamMembers = [
     },
 ];
 
+const teamMembersWrapper = document.getElementById('members-wrapper');
+
 for (let i = 0; i < teamMembers.length; i++){
-    console.log(
-        `NAME => ${teamMembers[i].Name}, ROLE => ${teamMembers[i].Role}, IMG => ${teamMembers[i].Img}`
-    );
-}
+   const member = document.createElement('div');
+   member.innerHTML = `NAME => ${teamMembers[i].Name}, ROLE => ${teamMembers[i].Role}, IMG => ${teamMembers[i].Img}`;
+   teamMembersWrapper.append(member);
+};
