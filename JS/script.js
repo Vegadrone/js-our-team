@@ -41,6 +41,15 @@ const teamMembers = [
     },
 ];
 
+const newMember = {
+    Name: 'Franco Developpi',
+    Role: 'DA BOSS',
+    Img: './img/new-team-member-02.jpg',
+    Age: 44
+}
+
+teamMembers.push(newMember);
+
 const teamMembersWrapper = document.getElementById('members-wrapper');
 
 //Creating a Card
@@ -65,15 +74,6 @@ for (let i = 0; i < teamMembers.length; i++){
         </div>`
     teamMembersWrapper.append(cardCol);
 };
-
-const newMember = {
-    Name: 'Franco Developpi',
-    Role: 'DA BOSS',
-    Img: './img/new-team-member-02',
-    Age: 44
-}
-
-teamMembers.push(newMember);
 
 console.log(teamMembers);
 
