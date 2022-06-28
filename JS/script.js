@@ -49,9 +49,9 @@ for (let i = 0; i < teamMembers.length; i++){
     const cardCol = document.createElement('div');
     cardCol.classList.add('card', 'col-3', 'm-4');
     cardCol.innerHTML = `
-    "<img src="${teamMembers[i].Img}" class="card - img - top p - 3" alt="img">
+    <img src="${teamMembers[i].Img}" class="card-img-top p-3" alt="img">
         <div class="card-body">
-            <h5 class="card-title">${teamMembers[i].Name}</h5>
+            <h5 class="card-title fw-bold">${teamMembers[i].Name}</h5>
         </div >
         <ul class="list-group list-group-flush">
             <li class="list-group-item">Età: ${teamMembers[i].Age}</li>
@@ -61,7 +61,7 @@ for (let i = 0; i < teamMembers.length; i++){
             <h5 class="card-title">Links</h5>
             <a href="#" class="card-link">Linkedin</a>
             <a href="#" class="card-link">Instagram</a>
-        </div>"`
+        </div>`
     teamMembersWrapper.append(cardCol);
 };
 
